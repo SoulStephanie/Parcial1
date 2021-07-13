@@ -10,7 +10,7 @@ header,.content{
 
   .nav {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       height: 100vh;
       list-style: none;
       justify-content:space-around;
@@ -34,6 +34,16 @@ header,.content{
 }
 
 
+.aside{
+  display: none;
+}
+
+.article{
+  display: none;
+}
+
+
+
   /*Device = Tablets, Ipads (portrait)
     Screen = B/w 600px to 990px*/
     @media (min-width:600px) and (max-width: 990px)  {
@@ -43,10 +53,10 @@ header,.content{
 (2) Agrega el código necesartio de flex para que los elementos de navegación aparezcan en filas como en la imagen.
 */
         height: auto;
+        display: flex;
+        flex-direction: row;
     
       }
-
-
 
       .content{
         display: flex;
@@ -56,6 +66,8 @@ header,.content{
     }
     
       .aside {
+        display: flex;
+        flex-direction: column;
         border: solid;
         width: 30%;
         border-width: 1px;
@@ -72,6 +84,8 @@ header,.content{
       }
     
       .article{
+        display: flex;
+        flex-direction: column;
           width: 70%;
       }
   
@@ -87,17 +101,23 @@ header,.content{
   @media (min-width:991px) {
   
     header {
+
+      display: flex;
+      flex-direction: row;
 /*
 (3) Agrega codigo flex para que aparezcan los encabezados. (Solo necesitas activar flex)
-
+    
 */      
       }
 
       .nav {
+      
 /*
 (3.1) Utiliza el mismo .nav del media query anterior
 */
         height: auto;
+        display: flex;
+        flex-direction: row;
 
       }
 
@@ -123,6 +143,7 @@ header,.content{
         border: solid;
         width: 30%;
         border-width: 1px;
+        padding: .5em;
         
       }
     
@@ -131,6 +152,7 @@ header,.content{
         justify-content: space-evenly;
         border: solid;
         border-width: 1px;
+        
        
       }
     
@@ -141,13 +163,15 @@ header,.content{
 (4) Agrega codigo flex papara modificar el posicionamiento de los articulos en filas.
 
 */   
-
-          width: 70%;
+        display: flex;
+        flex-direction: row;
+        width: 70%;
       }
     
     
     .poem{
         display: flex;
+        flex-direction: row;
         border: solid;
         border-width: 1px;
         justify-content: flex-start;
